@@ -13,6 +13,10 @@ Add next config in the final line of the file:
  <VirtualHost *:443>
      DocumentRoot "C:/xampp/htdocs/opensky-information/proyectos/bisonte/wp"
      ServerName example.site.com
+     ## If need reverse proxy
+     # ProxyPass /api/ http://localhost:5000/
+     # ProxyPassReverse /api/ http://localhost:5000/
+     # Header set Access-Control-Allow-Origin "*"
      SSLEngine on
      SSLCertificateFile "crt/example.site.com/server.crt"
      SSLCertificateKeyFile "crt/example.site.com/server.key"
