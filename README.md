@@ -34,6 +34,13 @@ Add next config in the final line of the file:
  </VirtualHost>
 ```
 
+## uncomment for proxy the next lines in httpd.conf
+
+```
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+```
+
 ## Add following content of windows host file located in C:\Windows\System32\drivers\etc\etc
 
 ```
